@@ -372,13 +372,11 @@
 
                     </section>
 
-
                     <section class="mb-5" id="badges-icons">
 
                         <h2 class="fw-bold text-dark mb-1">Badges & Icons</h2>
                         <p class="text-secondary mb-5">Soft badges and circular icon patterns.</p>
 
-                        <!-- Icon Circles -->
                         <div class="mb-5">
 
                             <h3 class="h5 fw-bold text-dark mb-1">Icon Circles</h3>
@@ -454,7 +452,6 @@
 
                         </div>
 
-                        <!-- Soft Badges -->
                         <div>
 
                             <h3 class="h5 fw-bold text-dark mb-1">Soft Badges</h3>
@@ -527,6 +524,540 @@
 
                     </section>
 
+                    <section class="mb-5" id="forms">
+                        <h2 class="fw-bold text-dark mb-1">Forms</h2>
+                        <p class="text-secondary mb-5">UAB-themed form controls, selection states, file uploads, and validation patterns.</p>
+
+                        <div class="pb-5 mb-5 border-bottom">
+                            <h3 class="h5 fw-bold text-dark mb-1">Search and Standard Fields</h3>
+                            <p class="text-secondary small mb-4">Search input groups and standard controls with UAB focus styles.</p>
+
+                            <form class="mb-4">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <label for="txtSearch" class="form-label fw-semibold">Search</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-search" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="search" class="form-control" id="txtSearch" name="Search" placeholder="Search products or orders">
+                                            <button type="button" class="btn btn-primary uab-press">Search</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txtName" class="form-label fw-semibold">Name</label>
+                                        <input type="text" class="form-control" id="txtName" name="Name" placeholder="Enter a name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ddlDepartment" class="form-label fw-semibold">Department</label>
+                                        <select class="form-select" id="ddlDepartment" name="Department">
+                                            <option value="" selected disabled>Select a department</option>
+                                            <option value="UAB IT">UAB IT</option>
+                                            <option value="Print Services">Print Services</option>
+                                            <option value="Marketing">Marketing</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="code-card">
+                                <div class="code-header">
+                                    <span>HTML</span>
+                                    <button class="copy-btn" type="button" data-copy-target="searchFieldsCode">Copy</button>
+                                </div>
+<pre><code id="searchFieldsCode">&lt;form&gt;
+    &lt;div class="row g-4"&gt;
+        &lt;div class="col-12"&gt;
+            &lt;label for="txtSearch" class="form-label fw-semibold"&gt;Search&lt;/label&gt;
+            &lt;div class="input-group"&gt;
+                &lt;span class="input-group-text"&gt;
+                    &lt;i class="bi bi-search" aria-hidden="true"&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;input type="search" class="form-control" id="txtSearch" name="Search" placeholder="Search products or orders"&gt;
+                &lt;button type="button" class="btn btn-primary uab-press"&gt;Search&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="txtName" class="form-label fw-semibold"&gt;Name&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="txtName" name="Name" placeholder="Enter a name"&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="ddlDepartment" class="form-label fw-semibold"&gt;Department&lt;/label&gt;
+            &lt;select class="form-select" id="ddlDepartment" name="Department"&gt;
+                &lt;option value="" selected disabled&gt;Select a department&lt;/option&gt;
+                &lt;option value="UAB IT"&gt;UAB IT&lt;/option&gt;
+                &lt;option value="Print Services"&gt;Print Services&lt;/option&gt;
+                &lt;option value="Marketing"&gt;Marketing&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="pb-5 mb-5 border-bottom">
+                            <h3 class="h5 fw-bold text-dark mb-1">Selection Controls</h3>
+                            <p class="text-secondary small mb-4">Checkboxes, radio buttons, and switches using UAB green states.</p>
+
+                            <form class="mb-4">
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <fieldset>
+                                            <legend class="form-label fw-semibold">Delivery Method</legend>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="DeliveryMethod" id="rdoPickup" value="Pickup" checked>
+                                                <label class="form-check-label" for="rdoPickup">Pickup</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="DeliveryMethod" id="rdoShipping" value="Shipping">
+                                                <label class="form-check-label" for="rdoShipping">Shipping</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <fieldset>
+                                            <legend class="form-label fw-semibold">Additional Options</legend>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="chkProof" name="IncludeProof">
+                                                <label class="form-check-label" for="chkProof">Include a digital proof</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="chkRush" name="RushOrder" checked>
+                                                <label class="form-check-label" for="chkRush">Rush order</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label fw-semibold">Notifications</label>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="swtEmailNotifications" name="EmailNotifications" checked>
+                                            <label class="form-check-label" for="swtEmailNotifications">Email notifications</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="code-card">
+                                <div class="code-header">
+                                    <span>HTML</span>
+                                    <button class="copy-btn" type="button" data-copy-target="selectionControlsCode">Copy</button>
+                                </div>
+<pre><code id="selectionControlsCode">&lt;form&gt;
+    &lt;div class="row g-4"&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;fieldset&gt;
+                &lt;legend class="form-label fw-semibold"&gt;Delivery Method&lt;/legend&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="radio" name="DeliveryMethod" id="rdoPickup" value="Pickup" checked&gt;
+                    &lt;label class="form-check-label" for="rdoPickup"&gt;Pickup&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="radio" name="DeliveryMethod" id="rdoShipping" value="Shipping"&gt;
+                    &lt;label class="form-check-label" for="rdoShipping"&gt;Shipping&lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;fieldset&gt;
+                &lt;legend class="form-label fw-semibold"&gt;Additional Options&lt;/legend&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox" id="chkProof" name="IncludeProof"&gt;
+                    &lt;label class="form-check-label" for="chkProof"&gt;Include a digital proof&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox" id="chkRush" name="RushOrder" checked&gt;
+                    &lt;label class="form-check-label" for="chkRush"&gt;Rush order&lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;label class="form-label fw-semibold"&gt;Notifications&lt;/label&gt;
+            &lt;div class="form-check form-switch"&gt;
+                &lt;input class="form-check-input" type="checkbox" role="switch" id="swtEmailNotifications" name="EmailNotifications" checked&gt;
+                &lt;label class="form-check-label" for="swtEmailNotifications"&gt;Email notifications&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="pb-5 mb-5 border-bottom">
+                            <h3 class="h5 fw-bold text-dark mb-1">Range Control</h3>
+                            <p class="text-secondary small mb-4">A Bootstrap range input styled with the UAB color palette.</p>
+
+                            <form class="mb-4">
+                                <div class="row">
+                                    <div class="col-md-8 col-lg-6">
+                                        <label for="rngPriority" class="form-label fw-semibold">Priority Level</label>
+                                        <input type="range" class="form-range" id="rngPriority" name="Priority" min="1" max="5" value="3">
+                                        <div class="d-flex justify-content-between small text-secondary">
+                                            <span>Low</span>
+                                            <span>High</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="code-card">
+                                <div class="code-header">
+                                    <span>HTML</span>
+                                    <button class="copy-btn" type="button" data-copy-target="rangeControlCode">Copy</button>
+                                </div>
+<pre><code id="rangeControlCode">&lt;form&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-8 col-lg-6"&gt;
+            &lt;label for="rngPriority" class="form-label fw-semibold"&gt;Priority Level&lt;/label&gt;
+            &lt;input type="range" class="form-range" id="rngPriority" name="Priority" min="1" max="5" value="3"&gt;
+            &lt;div class="d-flex justify-content-between small text-secondary"&gt;
+                &lt;span&gt;Low&lt;/span&gt;
+                &lt;span&gt;High&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="pb-5 mb-5 border-bottom">
+                            <h3 class="h5 fw-bold text-dark mb-1">Attachment Upload</h3>
+                            <p class="text-secondary small mb-4">An accessible drag-and-drop attachment field with file details and removal controls.</p>
+
+                            <form class="mb-4" method="post" enctype="multipart/form-data">                                
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <label for="fileAttachment" class="form-label fw-semibold">Attachment</label>
+                                        <div class="uab-file-upload">
+                                            <input class="visually-hidden uab-file-upload-input" type="file" id="fileAttachment" name="Attachment" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
+                                            <label class="uab-file-upload-label text-center d-flex flex-column align-items-center justify-content-center rounded-soft" for="fileAttachment" id="fileAttachmentDropZone">
+
+                                                <div class="uab-icon-circle bg-uab-evergreen-10 mb-3" style="width: 50px; height: 50px;">
+                                                    <i class="bi bi-cloud-arrow-up text-primary" style="font-size: 1.8rem;" aria-hidden="true"></i>
+                                                </div>
+
+                                                <span class="fw-semibold text-dark mb-1">Upload an attachment</span>
+                                                <span class="small text-secondary mb-2">Drag and drop a file here or select a file from your device.</span>
+                                                <span class="btn btn-outline-primary btn-sm uab-press">Browse Files</span>
+                                                <span class="small text-secondary mt-3">PDF, DOC, DOCX, PNG, JPG — maximum 10 MB</span>
+                                            </label>
+
+                                            <div class="uab-file-selection rounded-soft d-none mt-3" id="fileAttachmentSelection">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="uab-icon-circle bg-uab-evergreen-10 flex-shrink-0" style="width: 50px; height: 50px;">
+                                                        <i class="bi bi-file-earmark text-primary" style="font-size: 1.3rem;" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <p class="fw-semibold text-dark text-truncate mb-0" id="fileAttachmentName"></p>
+                                                        <p class="small text-secondary mb-0" id="fileAttachmentSize"></p>
+                                                    </div>
+                                                    <button class="btn btn-link text-danger p-2" id="removeFileAttachment" type="button" aria-label="Remove selected attachment">
+                                                        <i class="bi bi-x-circle fs-5" aria-hidden="true"></i>
+                                                    </button>
+                                                    <p class="small text-success mb-0">
+                                                        <i class="bi bi-check-circle me-1" aria-hidden="true"></i>
+                                                        Ready to upload
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <p class="text-danger mt-2 mb-0 d-none" id="fileAttachmentError" role="alert"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="code-card">
+
+                                <ul class="nav border-bottom px-3 pt-2" id="attachmentCodeTabs" role="tablist">
+
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link aero-tab active" id="attachmentHtmlTab" data-bs-toggle="tab" href="#attachmentHtmlPane" role="tab" aria-controls="attachmentHtmlPane" aria-selected="true">
+                                            HTML
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link aero-tab" id="attachmentJavaScriptTab" data-bs-toggle="tab" href="#attachmentJavaScriptPane" role="tab" aria-controls="attachmentJavaScriptPane" aria-selected="false">
+                                            JavaScript
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane fade show active" id="attachmentHtmlPane" role="tabpanel" aria-labelledby="attachmentHtmlTab" tabindex="0">
+
+                                        <div class="code-header">
+                                            <span>HTML</span>
+                                            <button class="copy-btn" type="button" data-copy-target="attachmentUploadHtmlCode">Copy</button>
+                                        </div>
+
+<pre><code id="attachmentUploadHtmlCode">&lt;form method="post" enctype="multipart/form-data"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-8"&gt;
+
+            &lt;label for="fileAttachment" class="form-label fw-semibold"&gt;Attachment&lt;/label&gt;
+
+            &lt;div class="uab-file-upload"&gt;
+
+                &lt;input class="visually-hidden uab-file-upload-input" type="file" id="fileAttachment" name="Attachment" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"&gt;
+
+                &lt;label class="uab-file-upload-label text-center d-flex flex-column align-items-center justify-content-center rounded-soft" for="fileAttachment" id="fileAttachmentDropZone"&gt;
+
+                    &lt;div class="uab-icon-circle bg-uab-evergreen-10 mb-3" style="width: 50px; height: 50px;"&gt;
+                        &lt;i class="bi bi-cloud-arrow-up text-primary" style="font-size: 1.8rem;" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;span class="fw-semibold text-dark mb-1"&gt;Upload an attachment&lt;/span&gt;
+
+                    &lt;span class="small text-secondary mb-2"&gt;
+                        Drag and drop a file here or select a file from your device.
+                    &lt;/span&gt;
+
+                    &lt;span class="btn btn-outline-primary btn-sm uab-press"&gt;
+                        Browse Files
+                    &lt;/span&gt;
+
+                    &lt;span class="small text-secondary mt-3"&gt;
+                        PDF, DOC, DOCX, PNG, JPG — maximum 10 MB
+                    &lt;/span&gt;
+
+                &lt;/label&gt;
+
+                &lt;div class="uab-file-selection rounded-soft d-none mt-3" id="fileAttachmentSelection" aria-live="polite"&gt;
+
+                    &lt;div class="d-flex align-items-center gap-3"&gt;
+
+                        &lt;div class="uab-icon-circle bg-uab-evergreen-10 flex-shrink-0" style="width: 50px; height: 50px;"&gt;
+                            &lt;i class="bi bi-file-earmark text-primary" style="font-size: 1.3rem;" aria-hidden="true"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="flex-grow-1 overflow-hidden"&gt;
+
+                            &lt;p class="fw-semibold text-dark text-truncate mb-0" id="fileAttachmentName"&gt;&lt;/p&gt;
+
+                            &lt;p class="small text-secondary mb-0" id="fileAttachmentSize"&gt;&lt;/p&gt;
+
+                            &lt;p class="small text-success mb-0"&gt;
+                                &lt;i class="bi bi-check-circle me-1" aria-hidden="true"&gt;&lt;/i&gt;
+                                Ready to upload
+                            &lt;/p&gt;
+
+                        &lt;/div&gt;
+
+                        &lt;button class="btn btn-link text-danger p-2" id="removeFileAttachment" type="button" aria-label="Remove selected attachment"&gt;
+                            &lt;i class="bi bi-x-circle fs-5" aria-hidden="true"&gt;&lt;/i&gt;
+                        &lt;/button&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;p class="text-danger mt-2 mb-0 d-none" id="fileAttachmentError" role="alert"&gt;&lt;/p&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+                                    </div>
+
+                                    <div class="tab-pane fade" id="attachmentJavaScriptPane" role="tabpanel" aria-labelledby="attachmentJavaScriptTab" tabindex="0">
+
+                                        <div class="code-header">
+                                            <span>JavaScript</span>
+                                            <button class="copy-btn" type="button" data-copy-target="attachmentUploadJavaScriptCode">Copy</button>
+                                        </div>
+
+<pre><code id="attachmentUploadJavaScriptCode">document.addEventListener("DOMContentLoaded", function () {
+    const fileInput = document.getElementById("fileAttachment");
+    const dropZone = document.getElementById("fileAttachmentDropZone");
+    const fileSelection = document.getElementById("fileAttachmentSelection");
+    const fileName = document.getElementById("fileAttachmentName");
+    const fileSize = document.getElementById("fileAttachmentSize");
+    const fileError = document.getElementById("fileAttachmentError");
+    const removeButton = document.getElementById("removeFileAttachment");
+
+    const maximumFileSize = 10 * 1024 * 1024;
+    const allowedExtensions = ["pdf", "doc", "docx", "png", "jpg", "jpeg"];
+
+    if (!fileInput || !dropZone) {
+        return;
+    }
+
+    fileInput.addEventListener("change", function () {
+        const selectedFile = fileInput.files[0];
+
+        if (selectedFile) {
+            handleFile(selectedFile, false);
+        }
+    });
+
+    dropZone.addEventListener("dragover", function (event) {
+        event.preventDefault();
+        dropZone.classList.add("border-primary");
+    });
+
+    dropZone.addEventListener("dragleave", function () {
+        dropZone.classList.remove("border-primary");
+    });
+
+    dropZone.addEventListener("drop", function (event) {
+        event.preventDefault();
+        dropZone.classList.remove("border-primary");
+
+        const droppedFile = event.dataTransfer.files[0];
+
+        if (droppedFile) {
+            handleFile(droppedFile, true);
+        }
+    });
+
+    removeButton.addEventListener("click", function () {
+        resetFile();
+        hideError();
+    });
+
+    function handleFile(file, updateInput) {
+        const validationMessage = validateFile(file);
+
+        if (validationMessage) {
+            resetFile();
+            showError(validationMessage);
+            return;
+        }
+
+        if (updateInput) {
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+            fileInput.files = dataTransfer.files;
+        }
+
+        hideError();
+
+        fileName.textContent = file.name;
+        fileSize.textContent = formatFileSize(file.size);
+
+        dropZone.classList.add("d-none");
+        fileSelection.classList.remove("d-none");
+    }
+
+    function validateFile(file) {
+        const extension = file.name
+            .split(".")
+            .pop()
+            .toLowerCase();
+
+        if (!allowedExtensions.includes(extension)) {
+            return "Please select a PDF, DOC, DOCX, PNG, JPG, or JPEG file.";
+        }
+
+        if (file.size &gt; maximumFileSize) {
+            return "The selected file must be 10 MB or smaller.";
+        }
+
+        return "";
+    }
+
+    function resetFile() {
+        fileInput.value = "";
+        fileName.textContent = "";
+        fileSize.textContent = "";
+
+        fileSelection.classList.add("d-none");
+        dropZone.classList.remove("d-none");
+    }
+
+    function showError(message) {
+        fileError.textContent = message;
+        fileError.classList.remove("d-none");
+    }
+
+    function hideError() {
+        fileError.textContent = "";
+        fileError.classList.add("d-none");
+    }
+
+    function formatFileSize(bytes) {
+        if (bytes &lt; 1024) {
+            return `${bytes} B`;
+        }
+
+        if (bytes &lt; 1024 * 1024) {
+            return `${(bytes / 1024).toFixed(1)} KB`;
+        }
+
+        return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+    }
+});</code></pre>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="h5 fw-bold text-dark mb-1">Validation States</h3>
+                            <p class="text-secondary small mb-4">Valid, invalid, disabled, and read-only controls.</p>
+
+                            <form class="mb-4">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label for="txtValid" class="form-label fw-semibold">Valid Field</label>
+                                        <input type="text" class="form-control is-valid" id="txtValid" value="12345" aria-describedby="txtValidFeedback">
+                                        <div class="valid-feedback" id="txtValidFeedback">Looks good.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txtInvalid" class="form-label fw-semibold">Invalid Field</label>
+                                        <input type="text" class="form-control is-invalid" id="txtInvalid" placeholder="Missing value" aria-describedby="txtInvalidFeedback">
+                                        <div class="invalid-feedback" id="txtInvalidFeedback">This field is required.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txtReadonly" class="form-label fw-semibold">Read-only Field</label>
+                                        <input type="text" class="form-control" id="txtReadonly" value="Automatically generated" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txtDisabled" class="form-label fw-semibold">Disabled Field</label>
+                                        <input type="text" class="form-control" id="txtDisabled" value="Unavailable" disabled>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="code-card">
+                                <div class="code-header">
+                                    <span>HTML</span>
+                                    <button class="copy-btn" type="button" data-copy-target="validationStatesCode">Copy</button>
+                                </div>
+<pre><code id="validationStatesCode">&lt;form&gt;
+    &lt;div class="row g-4"&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="txtValid" class="form-label fw-semibold"&gt;Valid Field&lt;/label&gt;
+            &lt;input type="text" class="form-control is-valid" id="txtValid" value="12345" aria-describedby="txtValidFeedback"&gt;
+            &lt;div class="valid-feedback" id="txtValidFeedback"&gt;Looks good.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="txtInvalid" class="form-label fw-semibold"&gt;Invalid Field&lt;/label&gt;
+            &lt;input type="text" class="form-control is-invalid" id="txtInvalid" placeholder="Missing value" aria-describedby="txtInvalidFeedback"&gt;
+            &lt;div class="invalid-feedback" id="txtInvalidFeedback"&gt;This field is required.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="txtReadonly" class="form-label fw-semibold"&gt;Read-only Field&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="txtReadonly" value="Automatically generated" readonly&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="txtDisabled" class="form-label fw-semibold"&gt;Disabled Field&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="txtDisabled" value="Unavailable" disabled&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    
                     <section class="mb-5" id="tables">
 
                         <h2 class="fw-bold text-dark mb-1">Tables</h2>
@@ -1268,7 +1799,139 @@
                     }, 1500);
                 });
             });
-        </script>            
+        </script>      
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const fileInput = document.getElementById("fileAttachment");
+                const dropZone = document.getElementById("fileAttachmentDropZone");
+                const fileSelection = document.getElementById("fileAttachmentSelection");
+                const fileName = document.getElementById("fileAttachmentName");
+                const fileSize = document.getElementById("fileAttachmentSize");
+                const fileError = document.getElementById("fileAttachmentError");
+                const removeButton = document.getElementById("removeFileAttachment");
+
+                const maximumFileSize = 10 * 1024 * 1024;
+                const allowedExtensions = [
+                    "pdf",
+                    "doc",
+                    "docx",
+                    "png",
+                    "jpg",
+                    "jpeg"
+                ];
+
+                if (!fileInput || !dropZone) {
+                    return;
+                }
+
+                fileInput.addEventListener("change", function () {
+                    const selectedFile = fileInput.files[0];
+
+                    if (selectedFile) {
+                        handleFile(selectedFile, false);
+                    }
+                });
+
+                dropZone.addEventListener("dragover", function (event) {
+                    event.preventDefault();
+                    dropZone.classList.add("border-primary");
+                });
+
+                dropZone.addEventListener("dragleave", function () {
+                    dropZone.classList.remove("border-primary");
+                });
+
+                dropZone.addEventListener("drop", function (event) {
+                    event.preventDefault();
+                    dropZone.classList.remove("border-primary");
+
+                    const droppedFile = event.dataTransfer.files[0];
+
+                    if (droppedFile) {
+                        handleFile(droppedFile, true);
+                    }
+                });
+
+                removeButton.addEventListener("click", function () {
+                    resetFile();
+                    hideError();
+                });
+
+                function handleFile(file, updateInput) {
+                    const validationMessage = validateFile(file);
+
+                    if (validationMessage) {
+                        resetFile();
+                        showError(validationMessage);
+                        return;
+                    }
+
+                    if (updateInput) {
+                        const dataTransfer = new DataTransfer();
+                        dataTransfer.items.add(file);
+                        fileInput.files = dataTransfer.files;
+                    }
+
+                    hideError();
+
+                    fileName.textContent = file.name;
+                    fileSize.textContent = formatFileSize(file.size);
+
+                    dropZone.classList.add("d-none");
+                    fileSelection.classList.remove("d-none");
+                }
+
+                function validateFile(file) {
+                    const extension = file.name
+                        .split(".")
+                        .pop()
+                        .toLowerCase();
+
+                    if (!allowedExtensions.includes(extension)) {
+                        return "Please select a PDF, DOC, DOCX, PNG, JPG, or JPEG file.";
+                    }
+
+                    if (file.size > maximumFileSize) {
+                        return "The selected file must be 10 MB or smaller.";
+                    }
+
+                    return "";
+                }
+
+                function resetFile() {
+                    fileInput.value = "";
+                    fileName.textContent = "";
+                    fileSize.textContent = "";
+
+                    fileSelection.classList.add("d-none");
+                    dropZone.classList.remove("d-none");
+                }
+
+                function showError(message) {
+                    fileError.textContent = message;
+                    fileError.classList.remove("d-none");
+                }
+
+                function hideError() {
+                    fileError.textContent = "";
+                    fileError.classList.add("d-none");
+                }
+
+                function formatFileSize(bytes) {
+                    if (bytes < 1024) {
+                        return `${bytes} B`;
+                    }
+
+                    if (bytes < 1024 * 1024) {
+                        return `${(bytes / 1024).toFixed(1)} KB`;
+                    }
+
+                    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+                }
+            });
+        </script>
+
     </body>
 </html>
 

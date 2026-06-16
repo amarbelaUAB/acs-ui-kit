@@ -6,13 +6,15 @@ Using the UAB UI Kit instructions and the existing `uab-theme.css`, `site.css`, 
 
 ## Requirements
 
-* Reuse existing UAB UI Kit components and CSS classes.
-* Use Bootstrap 5.3 utilities for layout and spacing.
-* Do not invent a new design or color palette.
-* Do not create new CSS classes unless no existing Bootstrap or UAB class can solve the requirement.
+* Use existing UAB UI Kit patterns first.
+* Use standard Bootstrap 5.3 components when no UAB-specific pattern exists.
+* Reuse existing Bootstrap and UAB classes.
+* Do not invent colors, components, or CSS classes unnecessarily.
+* Use Bootstrap utilities for layout and spacing.
 * Use Bootstrap Icons.
+* Do not wrap content in cards unless the design requires it.
+* Keep reusable CSS in `uab-theme.css` and page-specific CSS in `site.css`.
 * Make the interface responsive and accessible.
-* Follow the existing HTML formatting style.
-* Include any required JavaScript using Bootstrap APIs.
-* Before adding custom CSS, state why the existing classes are insufficient.
-* At the end, list the existing UI Kit components and classes that were reused.
+* Follow the existing compact HTML formatting style.
+* Include JavaScript only when required.
+* List the Bootstrap and UAB components reused.
