@@ -1,7 +1,5 @@
 :root {
     --sidebar-width: 260px;
-    --uab-green: #1E6B52;
-    --uab-dark-green: #144B39;
     --font-serif: "kulturista-web", "ui-serif", "Georgia", "Cambria",
         "Times New Roman", "Times", serif;
     --font-sans: "proxima-nova", "ui-sans-serif", "system-ui", "-apple-system",
@@ -21,7 +19,7 @@ body {
 
 .sidebar {
     width: 100%;
-    background: var(--uab-dark-green);
+    background: var(--uab-dragon-green);
     padding: 1rem;
 }
 
