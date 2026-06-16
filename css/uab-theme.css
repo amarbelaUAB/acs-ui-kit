@@ -809,3 +809,192 @@ h1, h2, .display-5 {
         font-size: 2rem;
     }
 }
+
+
+/* SOFT ANIMATIONS */
+
+.uab-fade-in {
+    animation: uabFadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.uab-slide-up {
+    animation: uabSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.uab-scale-in {
+    animation: uabScaleIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.uab-hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .uab-hover-lift:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.06), 0 12px 28px rgba(26,86,50,0.08);
+    }
+
+.uab-hover-glow {
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+    .uab-hover-glow:hover {
+        border-color: var(--uab-green);
+        box-shadow: 0 0 0 4px rgba(26,86,50,0.06);
+    }
+
+.uab-press {
+    transition: transform 0.08s ease;
+}
+
+    .uab-press:active {
+        transform: scale(0.98);
+    }
+
+.uab-link {
+    transition: color 0.2s ease;
+}
+
+    .uab-link:hover {
+        color: var(--uab-dragon-green) !important;
+    }
+
+.uab-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+    .uab-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(26,86,50,0.18);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.06), 0 18px 40px rgba(26,86,50,0.08);
+    }
+
+.uab-delay-1 {
+    animation-delay: 0.05s;
+}
+
+.uab-delay-2 {
+    animation-delay: 0.1s;
+}
+
+.uab-delay-3 {
+    animation-delay: 0.15s;
+}
+
+.uab-delay-4 {
+    animation-delay: 0.2s;
+}
+
+.uab-skeleton {
+    background: linear-gradient( 90deg, #f1f3f5 25%, #e9ecef 37%, #f1f3f5 63% );
+    background-size: 400% 100%;
+    animation: uabSkeleton 1.4s ease infinite;
+}
+
+.uab-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.22s ease, background-color 0.22s ease;
+}
+
+    .uab-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(26,86,50,0.18);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.06), 0 18px 40px rgba(26,86,50,0.10);
+        cursor: pointer;
+    }
+
+    .uab-card .uab-card-image {
+        transition: transform 0.4s ease;
+    }
+
+    .uab-card:hover .uab-card-image {
+        transform: scale(1.035);
+    }
+
+    .uab-card .uab-card-title {
+        transition: color 0.2s ease;
+    }
+
+    .uab-card:hover .uab-card-title {
+        color: var(--uab-green);
+    }
+
+    .uab-card .btn {
+        transition: transform 0.15s ease;
+    }
+
+    .uab-card:hover .btn {
+        transform: translateY(-1px);
+    }
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--uab-green);
+    box-shadow: 0 0 0 0.2rem rgba(26,86,50,0.15);
+}
+
+@keyframes uabFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes uabSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes uabScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes uabSkeleton {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .uab-fade-in,
+    .uab-slide-up,
+    .uab-scale-in,
+    .uab-hover-lift,
+    .uab-hover-glow,
+    .uab-press,
+    .uab-card,
+    .uab-skeleton {
+        animation: none !important;
+        transition: none !important;
+    }
+
+        .uab-hover-lift:hover,
+        .uab-card:hover {
+            transform: none;
+            box-shadow: none;
+        }
+}
