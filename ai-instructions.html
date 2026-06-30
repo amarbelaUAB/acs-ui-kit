@@ -6,16 +6,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AI Instructions | ACS UI Kit</title>
+        <title>AI Setup Guide | ACS UI Kit</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-        <link rel="stylesheet" href="https://use.typekit.net/pqq8aix.css">
-
+        <link rel="stylesheet" href="https://use.typekit.net/bwu2roe.css">
         <link rel="stylesheet" href="css/uab-theme.css">
-        <link rel="stylesheet" href="css/site.css">
 
     </head>
 
@@ -25,111 +21,376 @@
 
             <div class="container py-5">
 
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+                <header class="mb-5">
 
-                    <div>
+                    <a class="small text-primary text-decoration-none d-inline-flex align-items-center mb-3" href="index.html">
+                        <i class="bi bi-arrow-left me-2" aria-hidden="true"></i>
+                        Back to UI Kit
+                    </a>
 
-                        <a class="small text-primary text-decoration-none d-inline-flex align-items-center mb-3" href="index.html">
-                            <i class="bi bi-arrow-left me-2" aria-hidden="true"></i>
-                            Back to UI Kit
-                        </a>
+                    <div class="row align-items-center g-4">
 
-                        <h1 class="font-serif fw-bold text-dark mb-2">
-                            AI Development Instructions
-                        </h1>
+                        <div class="col-12">
 
-                        <p class="text-secondary mb-0">
-                            Instructions for generating applications using the ACS UAB theme and existing UI components.
-                        </p>
+                            <p class="text-uppercase text-primary fw-bold small mb-2">
+                                AI Setup Guide
+                            </p>
 
-                    </div>
+                            <h1 class="font-serif fw-bold text-dark mb-3">
+                                Set Up an ASP.NET MVC App with the ACS / UAB UI Kit
+                            </h1>
 
-                    <div class="d-flex flex-wrap gap-2">
-
-                        <button class="btn btn-primary uab-press" id="copyInstructionsButton" type="button">
-                            <i class="bi bi-clipboard me-2" aria-hidden="true"></i>
-                            Copy Instructions
-                        </button>
-
-                        <a class="btn btn-outline-primary uab-press" href="docs/AI_INSTRUCTIONS.md" download="AI_INSTRUCTIONS.md">
-                            <i class="bi bi-download me-2" aria-hidden="true"></i>
-                            Download
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="code-card">
-
-                    <div class="code-header">
-                        <span>AI_INSTRUCTIONS.md</span>
-                    </div>
-
-                    <pre class="mb-0"><code id="aiInstructions">Loading instructions...</code></pre>
-
-                </div>
-
-                <div class="alert alert-danger rounded-soft d-none mt-4" id="instructionsError" role="alert">
-                    <strong>Error:</strong>
-                    The AI instructions file could not be loaded.
-                </div>
-
-                <section class="mt-5" id="page-generation-prompt">
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
-
-                        <div>
-
-                            <h2 class="font-serif fw-bold text-dark mb-2">
-                                Page Generation Prompt
-                            </h2>
-
-                            <p class="text-secondary mb-0">
-                                Use this prompt when asking an AI agent to generate a page or component using the UAB UI Kit.
+                            <p class="lead text-secondary mb-0">
+                                Use this guide to create the app, add the required folders, and give Copilot the correct instructions before applying the ACS / UAB UI Kit.
                             </p>
 
                         </div>
 
-                        <div class="d-flex flex-wrap gap-2">
+                    </div>
 
-                            <button class="btn btn-primary uab-press" type="button" data-copy-target="pageGenerationPrompt">
-                                <i class="bi bi-clipboard me-2" aria-hidden="true"></i>
-                                Copy Prompt
-                            </button>
+                </header>
 
-                            <a class="btn btn-outline-primary uab-press" href="docs/PAGE_GENERATION_PROMPT.md" download="PAGE_GENERATION_PROMPT.md">
-                                <i class="bi bi-download me-2" aria-hidden="true"></i>
-                                Download
-                            </a>
+                <section class="mb-5" id="usage-steps">
+
+                    <div class="mb-4">
+                        <h2 class="font-serif fw-bold text-dark mb-2">
+                            Usage Instructions
+                        </h2>
+
+                        <p class="text-secondary mb-0">
+                            Follow these three steps when starting a new ASP.NET MVC or ASP.NET Core MVC application.
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+
+                        <div class="col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-primary rounded-pill mb-3">Step 1</span>
+
+                                    <h3 class="h5 fw-bold text-dark mb-2">
+                                        Create the app
+                                    </h3>
+
+                                    <p class="text-secondary mb-0">
+                                        Create the ASP.NET MVC or ASP.NET Core MVC app normally in Visual Studio. Run it once before applying the UI Kit.
+                                    </p>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-primary rounded-pill mb-3">Step 2</span>
+
+                                    <h3 class="h5 fw-bold text-dark mb-2">
+                                        Add the folders
+                                    </h3>
+
+                                    <p class="text-secondary mb-0">
+                                        Add <code>.github/copilot-instructions.md</code> and the <code>acs-ui-kit-template</code> folder in the solution root.
+                                    </p>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-primary rounded-pill mb-3">Step 3</span>
+
+                                    <h3 class="h5 fw-bold text-dark mb-2">
+                                        Ask Copilot for a plan
+                                    </h3>
+
+                                    <p class="text-secondary mb-3">
+                                        Use Agent mode and ask Copilot to inspect the app before making changes.
+                                    </p>
+
+                                    <button class="btn btn-primary uab-press" type="button" data-copy-template="copilotChatPrompt">
+                                        <i class="bi bi-clipboard me-2" aria-hidden="true"></i>
+                                        Copy Copilot Prompt
+                                    </button>
+                                </div>
+                            </article>
 
                         </div>
 
                     </div>
 
-                    <div class="alert alert-primary rounded-soft mb-4" role="alert">
+                </section>
 
-                        <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
+                <section class="mb-5" id="folder-structure">
 
-                        Replace
-                        <code>[Describe the page or component here.]</code>
-                        with the interface you want the AI agent to generate.
+                    <div class="mb-4">
+                        <h2 class="font-serif fw-bold text-dark mb-2">
+                            Folder Structure
+                        </h2>
 
+                        <p class="text-secondary mb-0">
+                            Keep the UI Kit resources separate from the MVC project files, but inside the same solution workspace.
+                        </p>
                     </div>
 
-                    <div class="code-card">
+                    <div class="row g-4">
 
-                        <div class="code-header">
-                            <span>PAGE_GENERATION_PROMPT.md</span>
+                        <div class="col-lg-6">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bold text-dark mb-3">
+                                        Solution root
+                                    </h3>
+
+                                    <pre class="bg-dark text-white rounded-soft p-4 mb-0 overflow-auto"><code>MyNewApp/
+├── .github/
+│   └── copilot-instructions.md
+├── acs-ui-kit-template/
+│   ├── css/
+│   ├── docs/
+│   └── images/
+├── MyNewApp/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Views/
+│   ├── wwwroot/
+│   └── Program.cs
+└── MyNewApp.sln</code></pre>
+                                </div>
+                            </article>
+
                         </div>
 
-                <pre class="mb-0"><code id="pageGenerationPrompt">Loading prompt...</code></pre>
+                        <div class="col-lg-6">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bold text-dark mb-3">
+                                        UI Kit template folder
+                                    </h3>
+
+                                    <pre class="bg-dark text-white rounded-soft p-4 mb-0 overflow-auto"><code>acs-ui-kit-template/
+├── css/
+│   └── uab-theme.css
+├── docs/
+│   ├── acs-ui-kit.html
+│   └── instructions.md
+└── images/
+    ├── UAB_Logo_White.svg
+    ├── UAB_Monogram_White.svg
+    └── UAS_Logo_White.svg</code></pre>
+                                </div>
+                            </article>
+
+                        </div>
 
                     </div>
 
-                    <div class="alert alert-danger rounded-soft d-none mt-4" id="pageGenerationPromptError" role="alert">
-                        <strong>Error:</strong>
-                        The page generation prompt could not be loaded.
+                </section>
+
+                <section class="mb-5 d-none" id="instruction-sources">
+
+                    <div class="mb-4">
+                        <h2 class="font-serif fw-bold text-dark mb-2">
+                            Instruction Sources
+                        </h2>
+
+                        <p class="text-secondary mb-0">
+                            These are the three instruction sources used during the setup process.
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+
+                        <div class="col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <i class="bi bi-chat-square-text fs-2 text-primary d-block mb-3" aria-hidden="true"></i>
+
+                                    <h3 class="h5 fw-bold text-dark mb-2">
+                                        Copilot Chat Prompt
+                                    </h3>
+
+                                    <p class="text-secondary mb-4">
+                                        Paste this prompt into Copilot Agent after the folders are in place. It asks Copilot for an implementation plan first.
+                                    </p>
+
+                                    <button class="btn btn-primary uab-press" type="button" data-copy-template="copilotChatPrompt">
+                                        <i class="bi bi-clipboard me-2" aria-hidden="true"></i>
+                                        Copy Prompt
+                                    </button>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <i class="bi bi-github fs-2 text-primary d-block mb-3" aria-hidden="true"></i>
+
+                                    <h3 class="h5 fw-bold text-dark mb-2">
+                                        Copilot Instructions
+                                    </h3>
+
+                                    <p class="text-secondary mb-4">
+                                        Place this file in <code>.github/copilot-instructions.md</code>. It tells Copilot to preserve logic and functionality.
+                                    </p>
+
+                                    <a class="btn btn-outline-primary uab-press" href=".github/copilot-instructions.md" download="copilot-instructions.md">
+                                        <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                        Download
+                                    </a>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <i class="bi bi-palette fs-2 text-primary d-block mb-3" aria-hidden="true"></i>
+
+                                    <h3 class="h5 fw-bold text-dark mb-2">
+                                        ACS UI Kit Instructions
+                                    </h3>
+
+                                    <p class="text-secondary mb-4">
+                                        Place this file in <code>acs-ui-kit-template/docs/instructions.md</code>. It explains how to use the UI Kit patterns.
+                                    </p>
+
+                                    <a class="btn btn-outline-primary uab-press" href="acs-ui-kit-template/docs/instructions.md" download="instructions.md">
+                                        <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                        Download
+                                    </a>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section id="folder-files">
+
+                    <div class="mb-4">
+                        <h2 class="font-serif fw-bold text-dark mb-2">
+                            Folder Files
+                        </h2>
+
+                        <p class="text-secondary mb-0">
+                            Download or verify the files that belong in each folder.
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bold text-dark mb-3">
+                                        .github
+                                    </h3>
+
+                                    <p class="text-secondary mb-4">
+                                        Repository-level Copilot instructions.
+                                    </p>
+
+                                    <a class="btn btn-outline-primary uab-press" href=".github/copilot-instructions.md" download="copilot-instructions.md">
+                                        <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                        copilot-instructions.md
+                                    </a>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bold text-dark mb-3">
+                                        docs
+                                    </h3>
+
+                                    <div class="d-grid gap-2">
+                                        <a class="btn btn-outline-primary uab-press" href="acs-ui-kit-template/docs/acs-ui-kit.html" download="acs-ui-kit.html">
+                                            <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                            acs-ui-kit.html
+                                        </a>
+
+                                        <a class="btn btn-outline-primary uab-press" href="acs-ui-kit-template/docs/instructions.md" download="instructions.md">
+                                            <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                            instructions.md
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bold text-dark mb-3">
+                                        css
+                                    </h3>
+
+                                    <p class="text-secondary mb-4">
+                                        Reusable ACS / UAB theme stylesheet.
+                                    </p>
+
+                                    <a class="btn btn-outline-primary uab-press" href="acs-ui-kit-template/css/uab-theme.css" download="uab-theme.css">
+                                        <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                        uab-theme.css
+                                    </a>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <article class="card h-100 shadow-soft border-soft">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bold text-dark mb-3">
+                                        images
+                                    </h3>
+
+                                    <div class="d-grid gap-2">
+                                        <a class="btn btn-outline-primary uab-press" href="acs-ui-kit-template/images/UAB_Logo_White.svg" download="UAB_Logo_White.svg">
+                                            <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                            UAB_Logo_White.svg
+                                        </a>
+
+                                        <a class="btn btn-outline-primary uab-press" href="acs-ui-kit-template/images/UAB_Monogram_White.svg" download="UAB_Monogram_White.svg">
+                                            <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                            UAB_Monogram_White.svg
+                                        </a>
+
+                                        <a class="btn btn-outline-primary uab-press" href="acs-ui-kit-template/images/UAS_Logo_White.svg" download="UAS_Logo_White.svg">
+                                            <i class="bi bi-download me-2" aria-hidden="true"></i>
+                                            UAS_Logo_White.svg
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+
                     </div>
 
                 </section>
@@ -138,53 +399,51 @@
 
         </main>
 
+        <template id="copilotChatPrompt">Please apply the ACS / UAB UI Kit template to this ASP.NET Core MVC application.
+
+Use the repository instructions from .github/copilot-instructions.md.
+
+The ACS / UAB UI Kit template folder is located in the solution root at:
+
+./acs-ui-kit-template
+
+Before making any file changes, inspect the application and the UI Kit template folder, then give me an implementation plan.
+
+Do not modify files yet.
+
+Read from the UI Kit template folder, but do not modify the files inside that folder.
+
+If assets are needed, copy only the required files from the template folder into the application’s normal public asset folders, such as:
+
+wwwroot/css
+wwwroot/images
+
+In the plan, include:
+
+The project type you detected.
+The current Bootstrap version and setup.
+The UI Kit files you reviewed.
+The application files you plan to modify.
+Any files you plan to create.
+Any assets you plan to copy.
+Any CSS or script references you plan to add or update.
+Existing dependencies you will preserve, especially jQuery, validation scripts, Bootstrap scripts, DataTables, and app-specific JavaScript.
+
+This is a style/template integration only.
+
+Preserve existing functionality, dependencies, routes, controllers, validation, authentication, and JavaScript behavior.</template>
+
         <script>
-            function loadTextFile(filePath, targetId, errorId) {
-                const target = document.getElementById(targetId);
-                const errorAlert = document.getElementById(errorId);
-
-                fetch(filePath)
-                    .then(function (response) {
-                        if (!response.ok) {
-                            throw new Error("Unable to load file.");
-                        }
-
-                        return response.text();
-                    })
-                    .then(function (content) {
-                        target.textContent = content;
-                    })
-                    .catch(function () {
-                        target.textContent = "";
-
-                        if (errorAlert) {
-                            errorAlert.classList.remove("d-none");
-                        }
-                    });
-            }
-
-            loadTextFile(
-                "docs/AI_INSTRUCTIONS.md",
-                "aiInstructions",
-                "instructionsError"
-            );
-
-            loadTextFile(
-                "docs/PAGE_GENERATION_PROMPT.md",
-                "pageGenerationPrompt",
-                "pageGenerationPromptError"
-            );
-
-            document.querySelectorAll("[data-copy-target]").forEach(function (button) {
+            document.querySelectorAll("[data-copy-template]").forEach(function (button) {
                 button.addEventListener("click", async function () {
-                    const targetId = button.dataset.copyTarget;
-                    const target = document.getElementById(targetId);
+                    const templateId = button.dataset.copyTemplate;
+                    const template = document.getElementById(templateId);
 
-                    if (!target || !target.textContent.trim()) {
+                    if (!template || !template.innerHTML.trim()) {
                         return;
                     }
 
-                    await navigator.clipboard.writeText(target.textContent);
+                    await navigator.clipboard.writeText(template.innerHTML.trim());
 
                     const originalContent = button.innerHTML;
 
